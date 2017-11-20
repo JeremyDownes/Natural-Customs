@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	background-image: url("../images/woodBG.jpg");
+	background-image: url("../images/CRITICAL/woodBG.jpg");
 }
 
 header {
@@ -30,8 +30,8 @@ header img {
 }
 
 .belair, .c10, .impala, .parts {
-}
 
+}
 
 .header-nav img {
 	height: 10vw;
@@ -56,6 +56,10 @@ header img {
 	width: 88%;
 }
 
+.header-nav p:hover {
+	display: block;
+}
+
 .content {
 	width: 100%;
 	display: flex;
@@ -70,7 +74,7 @@ header img {
 	margin-top: 2rem;
 }
 
-.mobile-mechanics, .home-services, .transportation, .parts {
+.mobile-mechanics, .home-services, .transportation, .part {
 	text-align: center;
 	width: 80%;
 }

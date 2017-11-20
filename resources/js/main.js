@@ -17,9 +17,9 @@ $(document).ready( function() {
 		$(".transportation").show();
 		$(".content p").hide();
 	});
-		$(".parts-accessories").click( function() {
+		$(".parts").click( function() {
 		$(".content section").hide();
-		$(".parts").show();
+		$(".part").show();
 		$(".content p").hide();
 	});
 
