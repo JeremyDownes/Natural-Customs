@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
 	<title>Natural Customs</title>
-	<link rel="stylesheet" type="text/css" href="resources/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
 </head>
 <body>
 	<header>
-		<img src="resources/images/CRITICAL/naturalcustomslogo.png">
+		<img src="../resources/images/CRITICAL/naturalcustomslogo.png">
 		<h1>"A handy guy to know"</h1>
 		<nav class="header-nav">
 			<div class="container-fluid">
 				<div class="row">
 					<?php
-					require "resources/php/createDB.php";
+					require "../resources/php/createDB.php";
 					$servername = "localhost";
 					$username = "NaturalCustoms";
 					$password = "1life2live";
@@ -28,13 +30,15 @@
 					    $class = str_ireplace("images/","",$row["imageURL"]);
 					    $class = basename($class,".jpg");	
 				            echo "<div class='col-xs-3'>		
-					    <img src='". $row["imageURL"]."' class ='".$class."'>  
+					    <img src='../". $row["imageURL"]."' class ='".$class."'>  
 					    <p class ='".$class."'>".$row['heading']."</p>
-					    </div>";
+					    <form action='changeNavImage.php' method='post' enctype='multipart/form-data'>
+					    <input type='file' name='fileToUpload' id='fileToUpload'>
+					    <input type='hidden' name='section' value='".$class."'> 
+					    <input type='submit' value='Change navigation image'></form></div>";
 
 					    } 
 					}
-					$conn->close();
 					?>
 				</div>
 			</div>
@@ -125,6 +129,6 @@
  		 integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
  		 crossorigin="anonymous">
   </script>
-  <script type="text/javascript" src="resources/js/main.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

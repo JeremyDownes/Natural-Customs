@@ -24,7 +24,7 @@ $(document).ready( function() {
 	});
 
 	$(".btn").click( function(){
-		$.get("resources/php/renderContent.php",{content: $(this).text()}, function(data) {
+		$.get("renderContent.php",{content: $(this).text()}, function(data) {
 		$(".contents").html(data);	
 		});
 	});
