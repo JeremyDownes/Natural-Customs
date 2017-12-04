@@ -9,8 +9,10 @@
 </head>
 <body>
 	<header>
+	  <div class="logo">
 		<img src="resources/images/CRITICAL/naturalcustomslogo.png">
 		<h1>"A handy guy to know"</h1>
+	 </div>
 		<nav class="header-nav">
 			<div class="container-fluid">
 				<div class="row">

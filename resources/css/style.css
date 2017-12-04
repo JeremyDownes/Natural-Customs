@@ -37,29 +37,46 @@ header img {
 	height: 10vw;
 	object-fit: cover;
 	border: 5px ridge;
+	cursor: pointer;
+
 }
 
 .header-nav p {
-	position: relative;
-	bottom: 5vw;
 	text-align: center;
 	color: black;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	font-weight: bold;
-	background-color: white;
+	background-color: #e3dac9;
 	display: none;
+	cursor: pointer;
 }
 
 .header-nav img:hover+p {
 	position: absolute;
+	top: 25%;
+	left: 25%;
 	display: block;
-	width: 88%;
+	width: 12vw;
+	border: 5px solid transparent;
+	border-image-source: url("../images/CRITICAL/chain.png");
+	border-image-slice: 10% 30%;
+	border-image-repeat: repeat;
+	border-image-width: 20%;
+	border-image-outset: 1;
+	cursor: pointer;
 }
 
 .header-nav p:hover {
-	position:absolute;
+	position: absolute;
+	left: 25%;
+	top: 25%;
 	display: block;
-	width:88%;
+	width: 12vw;
+	border: 5px solid transparent;
+	border-image-source: url("../images/CRITICAL/chain.png");
+	border-image-slice: 10% 30%;
+	border-image-repeat: repeat;
+	border-image-width: 20%;
 }
 
 .content {
@@ -81,16 +98,27 @@ header img {
 	width: 80%;
 }
 
-.contents {
+.contents div {
+  height: 70vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.contents h1 {
+  border: 5px ridge;
+  background-color: #e3dac9;
+  box-shadow: .2vw .2vw black;
+}
+
 .contents p {
-  background-color: rgba(0,0,0,0);
+  background-color: #e3dac9;
+  position: relative;
+  bottom: 5vh;
+  box-shadow: .2vw .2vw black;
 }
 
 .contents img {
-  width:80%;
+    height: 55vh;
 }
